@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+bool cmp(pair<int, string>a, pair<int, string>b) {
+	return a.first>b.first;
+}
+
 int main() {
 	vector<pair<int, string>>v;
 	v.push_back({3982, "Sayem"});
@@ -24,6 +28,7 @@ int main() {
 	Enter roll and name: 3977 Aminul
 	Enter roll and name: 3974 Saiful
 	*/
+	sort(data.begin(), data.end(), cmp);
 	for(int i=0; i<5; i++) {
 		cout<<data[i].first<<" "<<data[i].second<<endl;
 	}
